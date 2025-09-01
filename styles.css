@@ -1,0 +1,342 @@
+*{
+    font-family: Roboto;
+    color: #f0f8ff;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body{
+    background-color: #060608 ;
+}
+
+p{
+    max-width: fit-content;
+}
+
+.presentation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 12rem;
+}
+
+.title{
+    margin-top: 2rem;
+    margin-left: 4rem;
+    max-width: fit-content;
+}
+
+.nameUnderline{
+    text-decoration: underline;
+    text-decoration-color:#249fde ;
+}
+
+.description{
+    margin-top: 2rem;
+    margin-left: 4rem;
+    width: 30%;
+}
+
+@keyframes pan {
+    0% {
+    background-position: 0% 0%;
+    }
+    100% {
+    background-position: 100% 0%;
+    }
+}
+
+.selfie {
+    margin-top: 0;
+    background-image: url("media/lxsvrdMitad.svg");
+    width: 80%;
+    background-size: 20%;
+    animation: pan 10s linear infinite;
+    background-color: #060608;
+}
+
+.divSelfie{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 90%;
+}
+
+.linksRedes {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.linksRedes a {
+    color: #f0f8ff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.linkedin > g, .github > g{
+    fill: #f0f8ff;
+    transition: all 0.3s linear;
+}
+
+.linkedin:hover > g, .github:hover > g {
+    fill: #249fde;
+    transition: all 0.3s linear;
+}
+
+.contact{
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #249fde;
+    transition: all 0.3s linear;
+}
+
+.divText{
+    position:absolute;
+    z-index: 2;
+}
+
+.line{
+    width:80%;
+    height: 3px;
+    color: #249fde;
+    background-color: #249fde;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+hr{
+    border: none;
+}
+
+.divLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0;
+}
+
+.habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 25rem;
+    text-align: center;
+}
+
+.habilidades > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades > *{
+    flex: 1 1 calc(33.33% - 2rem);
+    box-sizing: border-box;
+}
+
+.svgHabilidades{
+    width: 60%;
+    height: 60%;
+    fill: #f0f8ff;
+}
+
+.titleHabilidades{
+    display: flex;
+    justify-content: center;
+}
+
+.svgHtml > svg, .svgCss > svg, .svgJavascript > svg, .svgReact > svg, .svgTailwind > svg, .svgGit > svg{
+    fill: #f0f8ff;
+    transition: all 0.3s linear;
+}
+
+.svgHtml:hover > svg{
+    fill: #df3e23;
+    transition: all 0.3s linear;
+}
+
+.svgCss:hover > svg{
+    fill: #793a80  ;
+    transition: all 0.3s linear;
+}
+
+.svgJavascript:hover > svg{
+    fill: #fffc40 ;
+    transition: all 0.3s linear;
+}
+
+.svgReact:hover > svg{
+    fill: #285cc4;
+    transition: all 0.3s linear;
+}
+
+.svgTailwind:hover > svg{
+    fill: #249fde;
+    transition: all 0.3s linear;
+}
+
+.svgGit:hover > svg{
+    fill: #fa6a0a ;
+    transition: all 0.3s linear;
+}
+
+.proyectosText{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 11rem;
+}
+
+#contactProyectos{
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #249fde;
+    margin-top: 0;
+}
+
+.proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 15rem;
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+.proyectos > *{
+    flex: 1 1 calc(50% - 2rem);
+    box-sizing: border-box;
+}
+
+iframe{
+    width: 100%;
+    height: 50vh;
+}
+
+.proyectosDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proyectosDiv > p{
+    margin: 1rem;
+}
+
+.contact:hover, #contactProyectos:hover{
+    transform: scale(1.10);
+    transition: all 0.3s linear;
+    color: #249fde;
+    text-decoration-color: #f0f8ff;
+}
+
+
+footer{
+    background-color: #141013;
+    background-size: 5%;
+    animation: pan2 10s linear infinite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerContent{
+    margin: 2rem 15rem;
+}
+
+.footerForm{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 20%;
+}
+
+.footerFinal{
+    background-color: #141013;
+}
+
+.footerForm > form > *{
+    margin-bottom: 0.5rem;
+}
+
+.footerForm > form {
+    margin-top: 1rem;
+}
+
+.formText{
+    color: #f0f8ff;
+    font-size: 12pt;
+    border: none;
+    padding: 0.5rem;
+    background-color: transparent;
+    transition: all 0.3s linear;
+    width: 93%;
+    border-bottom: #249fde solid 1px;
+}
+
+.formButton{
+    background-color: #249fde;
+    color: #f0f8ff;
+    border: none;
+    cursor: pointer;
+    font-size: 11pt;
+    padding: 0.5rem;
+    transition: all 0.3s linear;
+}
+
+.formButton:hover{
+    background-color: #f0f8ff;
+    color: #249fde;
+    transition: all 0.3s linear;
+}
+
+.footerDescription{
+    margin-top: 1rem;
+    max-width: 70%;
+}
+
+.footerDescription > p {
+    margin-top: 1rem;
+}
+
+.formText:focus, .formButton:focus{
+    outline: none;
+}
+
+.formButtonDiv{
+    display: flex;
+    justify-content: end;
+}
+
+#lineFooter{
+    background-color: #141013;
+}
+
+.footerFinal{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 3rem;
+    gap: 13rem;
+}
+
+#invis{
+    color: #141013;
+}
+
+.redesFooter{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
